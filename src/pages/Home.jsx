@@ -15,6 +15,7 @@ import {
 } from 'lucide-react'
 import ContactForm from '../components/ContactForm'
 import FAQAccordion from '../components/FAQAccordion'
+import { workSamples } from '../data/samples'
 
 const HomePage = () => {
   const [counter, setCounter] = useState({ years: 0, hours: 0, projects: 0, clients: 0 })
@@ -763,9 +764,9 @@ const HomePage = () => {
             whileInView="show"
             viewport={{ once: true }}
           >
-            {['Residential', 'Commercial', 'Electrical', 'Plumbing', 'HVAC', 'Masonry', 'Roofing', 'Drywall'].map((sample, idx) => (
+            {workSamples.map((sample) => (
               <motion.div 
-                key={sample} 
+                key={sample.id} 
                 variants={staggerItem}
                 whileHover={{ y: -10 }}
                 className="bg-white rounded-xl overflow-hidden shadow-lg group cursor-pointer"
@@ -775,8 +776,9 @@ const HomePage = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-dark/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 </div>
                 <div className="p-5">
-                  <h3 className="font-bold text-lg mb-1 group-hover:text-gold transition">{sample} Estimate</h3>
-                  <p className="text-gray-500 text-sm mb-3">Detailed material takeoff & cost analysis</p>
+                  <h3 className="font-bold text-lg mb-1 group-hover:text-gold transition">{sample.title}</h3>
+                  <p className="text-gray-500 text-sm mb-3">{sample.description}</p>
+                  <p className="text-gray-500 text-xs mb-3">{sample.files.map((file) => file.type.toUpperCase()).join(' / ')}</p>
                   <Link to="/work-samples" className="text-gold text-sm font-semibold inline-flex items-center gap-1 group-hover:gap-2 transition-all">
                     View Sample <ArrowRight size={14} />
                   </Link>

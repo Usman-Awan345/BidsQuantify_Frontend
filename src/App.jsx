@@ -7,7 +7,6 @@ import Services from './pages/Services'
 import ServiceDetail from './pages/ServiceDetail'
 import WorkSamples from './pages/WorkSamples'
 import Pricing from './pages/Pricing'
-import SamplePDFs from './pages/SamplePDFs'
 import UploadPlans from './pages/UploadPlans'
 import Contact from './pages/Contact'
 import { Toaster } from 'react-hot-toast'
@@ -24,7 +23,6 @@ function App() {
           <Route path="services/:slug" element={<ServiceDetail />} />
           <Route path="work-samples" element={<WorkSamples />} />
           <Route path="pricing" element={<Pricing />} />
-          <Route path="sample-pdfs" element={<SamplePDFs />} />
           <Route path="upload-plans" element={<UploadPlans />} />
           <Route path="contact" element={<Contact />} />
         </Route>

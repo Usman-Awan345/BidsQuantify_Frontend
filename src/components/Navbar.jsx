@@ -81,7 +81,6 @@ const Navbar = () => {
             <NavLink to="/about" className={({isActive}) => `font-medium ${isActive ? 'text-gold' : 'text-dark'} hover:text-gold transition`}>About Us</NavLink>
             <NavLink to="/work-samples" className={({isActive}) => `font-medium ${isActive ? 'text-gold' : 'text-dark'} hover:text-gold transition`}>Work Samples</NavLink>
             <NavLink to="/pricing" className={({isActive}) => `font-medium ${isActive ? 'text-gold' : 'text-dark'} hover:text-gold transition`}>Fee</NavLink>
-            <NavLink to="/sample-pdfs" className={({isActive}) => `font-medium ${isActive ? 'text-gold' : 'text-dark'} hover:text-gold transition`}>Sample PDFs</NavLink>
             <NavLink to="/upload-plans" className={({isActive}) => `font-medium ${isActive ? 'text-gold' : 'text-dark'} hover:text-gold transition`}>Upload Plans</NavLink>
             <NavLink to="/contact" className={({isActive}) => `font-medium ${isActive ? 'text-gold' : 'text-dark'} hover:text-gold transition`}>Contact Us</NavLink>
             <Link to="/contact" className="btn-primary py-2 px-5">Get Free Quote</Link>
@@ -108,7 +107,6 @@ const Navbar = () => {
             <NavLink to="/about" className="block py-2 hover:text-gold">About Us</NavLink>
             <NavLink to="/work-samples" className="block py-2 hover:text-gold">Work Samples</NavLink>
             <NavLink to="/pricing" className="block py-2 hover:text-gold">Fee</NavLink>
-            <NavLink to="/sample-pdfs" className="block py-2 hover:text-gold">Sample PDFs</NavLink>
             <NavLink to="/upload-plans" className="block py-2 hover:text-gold">Upload Plans</NavLink>
             <NavLink to="/contact" className="block py-2 hover:text-gold">Contact Us</NavLink>
             <Link to="/contact" className="btn-primary block text-center">Get Free Quote</Link>
